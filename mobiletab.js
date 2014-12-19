@@ -8,7 +8,7 @@ jQuery.fn.extend({
 		var $mobileTitle=$(".mobiletab-content-title");
 		var $this=this;
 		var $content=$(".mobiletab-content");
-		var $inactiveContent=$(".mobiletab-content.inactive");
+		//var $inactiveContent=$(".mobiletab-content.inactive");
 		//var currentIndex;
 		var init=function(){
 			if($window.width()<breakpoint) {
