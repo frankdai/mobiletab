@@ -14,7 +14,7 @@ Its HTML markup is like this:
     </div>
     <div class="mobiletab-content active">
         <div class="mobiletab-content-title">Tab1</div>
-        <div class="unfolod">Tab1 Contents</div>
+        <div class="unfold">Tab1 Contents</div>
     </div>
     <div class="mobiletab-content inactive">
         <div class="mobiletab-content-title">Tab2</div>

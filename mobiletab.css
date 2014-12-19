@@ -19,11 +19,5 @@
 
 /*endding non-essential part of css styles **/
 
-.mobiletab-content.active {
-    display:block;
-}
-
-.mobiletab-content.inactive {
-    display:none;
-}
+.mobiletab-content.active {display:block;} .mobiletab-content.inactive {display:none;}
 
