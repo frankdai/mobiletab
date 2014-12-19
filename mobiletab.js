@@ -1,5 +1,12 @@
 
 jQuery.fn.extend({
+	changeClass:function(removedClassName,addedClassName,index) {
+			this.removeClass(removedClassName)
+				.addClass(addedClassName)
+				.eq(index)
+				.removeClass(addedClassName)
+				.addClass(removedClassName);
+	},
 	mobileTab:function(options) {
 		var $=jQuery.noConflict();
 		var options=options||{};
@@ -30,14 +37,15 @@ jQuery.fn.extend({
 		var restore=function(index) {
 			$this.find("span").removeClass("active").eq(index).addClass("active");
 			$mobileTitle.removeClass("active").eq(index).addClass("active");
-			$blocks.removeClass("unfold").addClass("folded").eq(index).addClass("unfold").removeClass("folded");
+			$blocks.changeClass("unfold","folded",index);
 		}
+
 		init();
 		(function(){
 			var nav=$this.find("span");
 			nav.each(function(index,element){
 				$(element).click(function(){
-					$content.removeClass("active").addClass("inactive").eq(index).removeClass("inactive").addClass("active");
+					$content.changeClass("active","inactive",index);
 					nav.removeClass("active");
 					$(this).addClass("active");
 					currentIndex=index;
@@ -47,7 +55,7 @@ jQuery.fn.extend({
 				$(element).click(function(){
 					$mobileTitle.removeClass("active");
 					$(this).addClass("active");
-					$blocks.removeClass("unfold").addClass("folded").eq(index).addClass("unfold").removeClass("folded");
+					$blocks.changeClass("unfold","folded",index);
 					currentIndex=index;
 				})
 			})
@@ -59,7 +67,7 @@ jQuery.fn.extend({
 			}
 			else {
 				restore(currentIndex);
-				$content.removeClass("active").addClass("inactive").eq(currentIndex).addClass("active").removeClass("inactive");
+				$content.changeClass("active","inactive",currentIndex);
 			}
 		}
 	}
