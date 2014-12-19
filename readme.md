@@ -14,22 +14,23 @@ Its HTML markup is like this:
     </div>
     <div class="mobiletab-content active">
         <div class="mobiletab-content-title">Tab1</div>
-        <div class="unfold">Tab1 Contents</div>
+        <div class="mobiletab-content-block unfold">Tab1 Contents</div>
     </div>
     <div class="mobiletab-content inactive">
         <div class="mobiletab-content-title">Tab2</div>
-        <div class="folded">Tab2 Contents</div>
+        <div class="mobiletab-content-block folded">Tab2 Contents</div>
     </div>
     <div class="mobiletab-content inactive">
         <div class="mobiletab-content-title">Tab3</div>
-        <div class="folded">Tab3 Content</div>
+        <div class="mobiletab-content-block folded">Tab3 Content</div>
     </div>
     <div class="mobiletab-content inactive">
         <div class="mobiletab-content-title">Tab4</div>
-        <div class="folded">Tab4 Content</div>
+        <div class="mobiletab-content-block folded">Tab4 Content</div>
     </div>  
 
-Then link to the JS and CSS file
+Then link to the JS and CSS file. 
+
 
  
 

@@ -13,11 +13,40 @@
 }
 
 .mobiletab-desktop-nav {
-    background-color:#eeefff;
+    background-color:#aaa;
     padding:5px 0;
+}
+
+.mobiletab-content {
+    margin-bottom: 5px;
+}
+
+.mobiletab-content-title {
+    background-color:#aaa;
+    padding:5px 0;
+}
+
+.mobiletab-content-title.active {
+    color:#ae0010;
+}
+
+.mobiletab-content-block {
+    background-color: #eee;
 }
 
 /*endding non-essential part of css styles **/
 
-.mobiletab-content.active {display:block;} .mobiletab-content.inactive {display:none;}
+.mobiletab-content.active {
+    display:block;
+} 
+.mobiletab-content.inactive {
+    display:none;
+}
+.mobiletab-content-block.mobile.unfold {
+    display: block;
+}
+.mobiletab-content-block.mobile.folded {
+    display: none;
+}
+
 
