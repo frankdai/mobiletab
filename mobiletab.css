@@ -1,0 +1,29 @@
+/*begining non-essential part of css styles **/
+
+.mobiletab-desktop-nav span {
+    display:inline-block;
+    width:15%;
+    margin:0 5px;
+    text-align:center;
+    cursor:pointer;
+}
+
+.mobiletab-desktop-nav span.active {
+    color:#ae0010
+}
+
+.mobiletab-desktop-nav {
+    background-color:#eeefff;
+    padding:5px 0;
+}
+
+/*endding non-essential part of css styles **/
+
+.mobiletab-content.active {
+    display:block;
+}
+
+.mobiletab-content.inactive {
+    display:none;
+}
+
