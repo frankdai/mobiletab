@@ -6,7 +6,7 @@ MobileTab is a simple jQuery plugin which just does one job: in desktop model it
 Its HTML markup is like this:
 
     ```html
-    <div class="mobiletab-desktop--nav">
+    <div class="mobiletab-desktop-nav">
         <span class="active">Tab1</span> 
         <span>Tab2</span>
         <span>Tab3</span>
@@ -29,7 +29,15 @@ Its HTML markup is like this:
         <div class="mobiletab-content-block folded">Tab4 Content</div>
     </div>  
 
-Then link to the JS and CSS file. 
+Then link to the JS and CSS file. You will also need a working jQuery library to use this library properly.
+
+To use this library, simply
+    
+    ```javascript
+    jQuery(".mobiletab-desktop-nav").mobileTab();
+
+
+
 
 
  
