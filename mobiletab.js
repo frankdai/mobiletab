@@ -16,20 +16,21 @@ jQuery.fn.extend({
 				$this.hide();
 				$mobileTitle.show();
 				$content.show();
-				$blocks.addClass("mobile");
+				$blocks.removeClass("desktop").addClass("mobile");
 				isMobile=true;
 			}
 			else {
 				$this.show();
 				$mobileTitle.hide();
 				$content.removeAttr("style");
-				$blocks.removeClass("mobile");
+				$blocks.removeClass("mobile").addClass("desktop");
 				isMobile=false;
 			}
 		}
 		var restore=function(index) {
 			$this.find("span").removeClass("active").eq(index).addClass("active");
 			$mobileTitle.removeClass("active").eq(index).addClass("active");
+			$blocks.removeClass("unfold").addClass("folded").eq(index).addClass("unfold").removeClass("folded");
 		}
 		init();
 		(function(){
@@ -54,12 +55,11 @@ jQuery.fn.extend({
 		window.onresize=function(){
 			init();
 			if (isMobile) {
-				restore(currentIndex)
-				$blocks.removeClass("unfold").addClass("folded").eq(currentIndex).addClass("unfold").removeClass("folded");
+				restore(currentIndex);
 			}
 			else {
-				restore(currentIndex)
-				$content.hide().eq(currentIndex).show();
+				restore(currentIndex);
+				$content.removeClass("active").addClass("inactive").eq(currentIndex).addClass("active").removeClass("inactive");
 			}
 		}
 	}
