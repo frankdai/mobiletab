@@ -1,14 +1,14 @@
 
 jQuery.fn.extend({
-	changeClass:function(removedClassName,addedClassName,index) {
+	mobileTab:function(options) {
+		var $=jQuery.noConflict();
+		$.fn.changeClass=function(removedClassName,addedClassName,index) {
 			this.removeClass(removedClassName)
 				.addClass(addedClassName)
 				.eq(index)
 				.removeClass(addedClassName)
 				.addClass(removedClassName);
-	},
-	mobileTab:function(options) {
-		var $=jQuery.noConflict();
+		};
 		var options=options||{};
 		var breakpoint=options.breakpoint||760;
 		var $window=$(window);
